@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  
+	<link rel="stylesheet" href='src/styles/nullstyle.css'>
+	<link rel="stylesheet" href="src/styles/style.css">
+	<link rel="stylesheet" href="src/styles/renponsive.css">
+
+	<title>UMKM Cimi-Cimi</title>
+</head>
+<body>
+
+	<div class="wrapper">
+		<app-header></app-header>
+			<app-delivering></app-delivering>
+			<app-home></app-home>
+			<app-our-menu></app-our-menu>
+			<app-map></app-map>
+		<app-footer></app-footer>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script src="slick.min.js"></script>
+	<script src="script.js"></script>
+	<script src="dist/bundle.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+		  // Ambil referensi elemen tombol dengan ID "moreInfoBtn"
+		  var moreInfoBtn = document.getElementById("moreInfoBtn");
+	  
+		  // Tambahkan event listener untuk menangani klik pada tombol
+		  moreInfoBtn.addEventListener("click", function() {
+			// Dapatkan nilai atribut "href" dari elemen tombol
+			var link = moreInfoBtn.getAttribute("href");
+	  
+			// Arahkan pengguna ke halaman yang ditentukan oleh atribut "href"
+			window.location.href = link;
+		  });
+		});
+	  </script>
+</body>
+</html>
